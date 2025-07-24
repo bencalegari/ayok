@@ -10,35 +10,19 @@ class SongsTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Songs"
   end
 
-  test "should create song" do
+  test "should search for a song" do
     visit songs_url
-    click_on "New song"
+    click_on "Search song"
 
-    fill_in "Artist", with: @song.artist
-    fill_in "Title", with: @song.title
-    fill_in "Youtube url", with: @song.youtube_url
-    click_on "Create Song"
+    fill_in "query", with: @song.title
+    click_on "Search"
 
-    assert_text "Song was successfully created"
-    click_on "Back"
-  end
-
-  test "should update Song" do
-    visit song_url(@song)
-    click_on "Edit this song", match: :first
-
-    fill_in "Artist", with: @song.artist
-    fill_in "Title", with: @song.title
-    fill_in "Youtube url", with: @song.youtube_url
-    click_on "Update Song"
-
-    assert_text "Song was successfully updated"
-    click_on "Back"
+    assert_text "Results for \"#{@song.title}\":"
   end
 
   test "should destroy Song" do
-    visit song_url(@song)
-    accept_confirm { click_on "Destroy this song", match: :first }
+    visit songs_url
+    accept_confirm { click_on "Destroy", match: :first }
 
     assert_text "Song was successfully destroyed"
   end

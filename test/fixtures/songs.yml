@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  artist: MyString
-  youtube_url: MyString
+  title: Chop Suey
+  artist: System of a Down
+  youtube_url: https://www.youtube.com/watch?v=CSvFpBOe8eY
 
 two:
-  title: MyString
-  artist: MyString
-  youtube_url: MyString
+  title: Bounce
+  artist: System of a Down
+  youtube_url: https://www.youtube.com/watch?v=wz1ca1-_-MY
