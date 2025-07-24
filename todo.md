@@ -1,8 +1,8 @@
 # Backlog
 
 ## Todo
-- [ ] Get modern barebones rails structure
-- [ ] Search bar to input desired karaoke song
+- [x] Get modern barebones rails structure
+- [x] Search bar to input desired karaoke song
 - [ ] Hitting submit on the search returns the first karaoke link embedded in a frame
 - [ ] Return the first page of links
   - [ ] Title - Artist [Channel]
