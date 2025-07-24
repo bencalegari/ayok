@@ -82,8 +82,9 @@ production:
   primary: &primary_production
     <<: *default
     database: ayok_production
-    username: ayok
+    username: <%= ENV["AYOK_DATABASE_USERNAME"] %>
     password: <%= ENV["AYOK_DATABASE_PASSWORD"] %>
+    port: 5432
   cache:
     <<: *primary_production
     database: ayok_production_cache
